@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Comic Viewer</title>
+    <link rel="stylesheet" type="text/css" href="../Comics/Assets/Styles/read.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" class="active"><i class="ti-home"></i> Home</a></li>
+                <li><a href="#"><i class="ti-settings"></i> Settings</a></li>
+                <li><a href="#"><i class="ti-bell"></i> Updates</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="comic-container">
+        <div class="image-wrapper">
+            <img id="comic-image" src="" alt="Comic Image">
+        </div>
+        <div id="controls">
+            <button id="prev-btn">Previous</button>
+            <button id="next-btn">Next</button>
+        </div>
+        <div id="status-bar"></div>
+    </div>
+
+    <div id="settings">
+        <label for="dark-mode">Dark Mode</label>
+        <input type="checkbox" id="dark-mode">
+    </div>
+
+    <script src="../Comics/Assets/Scripts/read.js"></script>
+</body>
+
+</html>

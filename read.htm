@@ -8,11 +8,13 @@
 
 <body>
     <header>
+        <div class="logo">Logo</div>
         <nav>
             <ul>
-                <li><a href="#" class="active"><i class="ti-home"></i> Home</a></li>
-                <li><a href="#"><i class="ti-settings"></i> Settings</a></li>
-                <li><a href="#"><i class="ti-bell"></i> Updates</a></li>
+                <li class="centered"><a href="#">Home</a></li>
+                <li class="centered"><a href="#">Coming Soon</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Updates</a></li>
             </ul>
         </nav>
     </header>
@@ -22,11 +24,11 @@
             <img id="comic-image" src="" alt="Comic Image">
         </div>
         <div id="controls">
-            <button id="prev-btn">Previous</button>
-            <button id="next-btn">Next</button>
+            <button class="button-29" role="button" id="prev-btn"><i class="ti ti-chevron-left"></i></button>
+            <button class="button-29" role="button" id="next-btn"><i class="ti ti-chevron-right"></i></button>
         </div>
-        <div id="status-bar"></div>
     </div>
+    <div id="status-bar"></div>
 
     <div id="settings">
         <label for="dark-mode">Dark Mode</label>

@@ -6,30 +6,55 @@ body {
 }
 
 header {
-    background-color: #f9f9f9;
+    background-color: #333;
     padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
 }
 
 nav ul {
     list-style-type: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
 }
 
-nav li {
-    display: inline-block;
-    margin-right: 10px;
+nav ul li {
+    display: inline;
 }
 
-nav a {
+nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: #333;
-    padding: 5px 10px;
+    margin-left: 20px;
+    font-size: 16px;
 }
 
-nav a.active {
-    font-weight: bold;
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        font-size: 18px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-top: 10px;
+    }
+
+    nav ul li a {
+        margin-left: 0;
+        font-size: 14px;
+    }
 }
 
 #comic-container {
@@ -38,7 +63,6 @@ nav a.active {
     width: 100%;
     max-width: 800px;
     position: relative;
-    overflow: hidden;
 }
 
 .image-wrapper {
@@ -46,9 +70,8 @@ nav a.active {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 0;
-    padding-bottom: 100%;
-    /* Maintain aspect ratio */
+    height: 400px;
+    /* Adjust the height as desired */
     overflow: hidden;
 }
 
@@ -57,38 +80,17 @@ nav a.active {
     margin: 0 auto;
     max-width: 100%;
     max-height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 #controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 #prev-btn,
 #next-btn {
     display: inline-block;
-    padding: 10px;
-    background-color: #fff;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#prev-btn:hover,
-#next-btn:hover {
-    background-color: #f9f9f9;
 }
 
 #status-bar {
@@ -127,4 +129,49 @@ label {
 
 .dark-mode #status-bar {
     color: #fff;
+}
+
+.button-29 {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono", monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+}
+
+.button-29:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.button-29:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.button-29:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
 }
